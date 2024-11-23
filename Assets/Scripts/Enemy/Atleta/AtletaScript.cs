@@ -13,7 +13,7 @@ public class AtletaScript : MonoBehaviour
 
     void Update()
     {   
-        transform.Translate(Vector2.left * speed * Time.deltaTime);
+        transform.Translate(Vector2.down * speed * Time.deltaTime);
     }
     private void OnBecameInvisible()
     {        
