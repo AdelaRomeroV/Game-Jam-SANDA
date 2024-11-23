@@ -510,6 +510,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   clickBarFull: {fileID: 355979016}
+  timer: 0.5
 --- !u!1 &2046608404
 GameObject:
   m_ObjectHideFlags: 0

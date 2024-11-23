@@ -10,8 +10,21 @@ public class ClickPlayer : MonoBehaviour
      private float clickcount = 0;
 
 
+    [SerializeField] private float timer;
+    private float time = 0;
+
+
+
     void Update()
     {
+        time += Time.deltaTime;
+        if (time >= timer)
+        {
+
+            clickcount--;
+            time = 0;
+        }
+
         ClickCounter();
         clickBarFull.fillAmount = clickcount / 100f;
     }
