@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class LifeController : MonoBehaviour
 {
-    [SerializeField] private float life; //Vida actual
-    [SerializeField] private float maxLife; //Vida max
+    public float life; //Vida actual
+    public float maxLife; //Vida max
     private void Start()
     {
         life = maxLife;
