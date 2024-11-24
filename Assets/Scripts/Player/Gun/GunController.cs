@@ -71,6 +71,8 @@ public class GunController : MonoBehaviour
     {
         Vector3 shootDirection = (mousePos - hand.position).normalized;
 
+        float angle = Mathf.Atan2(shootDirection.y, shootDirection.x) * Mathf.Rad2Deg;
+
         GameObject projectile = Instantiate(handShootObjectPrefab, hand.position, Quaternion.identity);
 
         Rigidbody2D rb = projectile.GetComponent<Rigidbody2D>();

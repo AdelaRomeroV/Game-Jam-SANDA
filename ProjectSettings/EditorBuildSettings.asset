@@ -6,6 +6,12 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Chavez.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
+    path: Assets/Scenes/MainMenu.unity
+    guid: b9e532984c6007740bcb947e9274fc91
+  - enabled: 1
+    path: Assets/Scenes/MainGame.unity
+    guid: f99765c6586a6d34fb6b790c929b7bdc
+  - enabled: 1
+    path: Assets/Scenes/Credits.unity
+    guid: 95b58593644d6eb47b3f1b68bdf69773
   m_configObjects: {}
