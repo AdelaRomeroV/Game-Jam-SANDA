@@ -24,6 +24,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float tiempoInvulnerable = 2f; 
     [SerializeField] private float intervaloParpadeo = 0.2f;
 
+    public Animator animator;
     private bool esInvulnerable = false;
 
     private void Start()
@@ -41,6 +42,13 @@ public class PlayerMovement : MonoBehaviour
 
         velocity = new Vector2(horizontal, vertical).normalized * movSpeed;
         rb.velocity = velocity;
+
+        animator.SetFloat("pSpeed", velocity.magnitude); 
+
+        if (horizontal != 0)
+        {
+            spriteRenderer.flipX = horizontal < 0;
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
