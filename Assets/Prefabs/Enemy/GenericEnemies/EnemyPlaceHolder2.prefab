@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 3586850665830600905}
   - component: {fileID: 1069593869471202471}
   - component: {fileID: 1938783245890275354}
+  - component: {fileID: -3087643949749178194}
   m_Layer: 0
   m_Name: EnemyPlaceHolder2
   m_TagString: Untagged
@@ -27,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 2797827338140431950}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -11.81, y: 2.85, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -106,3 +107,17 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &-3087643949749178194
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2797827338140431950}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76f71bbbc4e098a46b46be12c9a10097, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemySpeed: 3
+  player: {fileID: 0}
