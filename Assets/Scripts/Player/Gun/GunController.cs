@@ -39,11 +39,9 @@ public class GunController : MonoBehaviour
 
     private void HandleShooting(Vector3 mousePos)
     {
-
         if (Time.time >= nextShootTime)
         {
             Shoot(mousePos);
-
             nextShootTime = Time.time + shootRate;
         }
     }
@@ -63,20 +61,17 @@ public class GunController : MonoBehaviour
     private void HandFlip()
     {
         handFacingRight = !handFacingRight;
-
         hand.localScale = new Vector3(hand.localScale.x, hand.localScale.y * -1, hand.localScale.z);
     }
 
     private void Shoot(Vector3 mousePos)
     {
         Vector3 shootDirection = (mousePos - hand.position).normalized;
-
         float angle = Mathf.Atan2(shootDirection.y, shootDirection.x) * Mathf.Rad2Deg;
 
-        GameObject projectile = Instantiate(handShootObjectPrefab, hand.position, Quaternion.identity);
+        GameObject projectile = Instantiate(handShootObjectPrefab, hand.position, Quaternion.Euler(0, 0, angle));
 
         Rigidbody2D rb = projectile.GetComponent<Rigidbody2D>();
-
         rb.velocity = shootDirection * shootSpeed;
 
         Destroy(projectile, 5f);
