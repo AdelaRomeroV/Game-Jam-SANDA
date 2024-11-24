@@ -11,7 +11,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private SpriteRenderer spriteRenderer;
 
     [Header("Movimiento")]
-    [SerializeField] private float movSpeed;
+    [SerializeField] private float movSpeed = 6f;
     private Vector2 velocity;
 
     [Header("Vida")]
@@ -23,7 +23,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float fuerzaEmpuje = 10f; 
     [SerializeField] private float tiempoInvulnerable = 2f; 
     [SerializeField] private float intervaloParpadeo = 0.2f;
-   
+
     private bool esInvulnerable = false;
 
     private void Start()
@@ -36,9 +36,11 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
-        velocity = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
-        velocity.Normalize();
-        rb.velocity = velocity * movSpeed;
+        float horizontal = Input.GetAxisRaw("Horizontal");
+        float vertical = Input.GetAxisRaw("Vertical");
+
+        velocity = new Vector2(horizontal, vertical).normalized * movSpeed;
+        rb.velocity = velocity;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
