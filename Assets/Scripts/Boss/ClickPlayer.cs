@@ -8,7 +8,7 @@ public class ClickPlayer : MonoBehaviour
 {
     [SerializeField] private Image clickBarFull;
     [SerializeField] private float maxClicks;
-     private float clickcount = 0;
+    [SerializeField] private float clickcount = 0;
 
 
     [SerializeField] private float timer;

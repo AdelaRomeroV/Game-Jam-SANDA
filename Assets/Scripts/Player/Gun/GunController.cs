@@ -15,7 +15,7 @@ public class GunController : MonoBehaviour
     [SerializeField] private float shootSpeed = 10f;
     [SerializeField] private float shootRate = 0.5f;
     private float nextShootTime = 0f;
-    [SerializeField] public float damage = 20; //Esta es para que cuando le pongan vida a los enemigos estos puedan sufrir daño.
+
     private void Update()
     {
         Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);

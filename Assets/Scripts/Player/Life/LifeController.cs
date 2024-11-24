@@ -6,6 +6,7 @@ public class LifeController : MonoBehaviour
 {
     public float life; //Vida actual
     public float maxLife; //Vida max
+    [SerializeField] private ReceiveDamageEffect EffectoRecibirDano;
     private void Start()
     {
         life = maxLife;
@@ -13,10 +14,13 @@ public class LifeController : MonoBehaviour
 
     public void lossLife(float loss)
     {
+        EffectoRecibirDano.HitFlash();
         life -= loss;
 
         if (life < 0)
         {
+
+            Destroy(gameObject);
 
             Debug.Log("Player has lost all of his life"); //aca ya cambiariamos depende de la situacion
 
