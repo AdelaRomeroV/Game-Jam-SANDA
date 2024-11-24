@@ -3076,8 +3076,8 @@ MonoBehaviour:
   - {fileID: 418570796}
   - {fileID: 779695520}
   - {fileID: 444565461}
-  intervaloMin: 1
-  intervaloMax: 3
+  intervaloMin: 3
+  intervaloMax: 5
 --- !u!1 &1748951072
 GameObject:
   m_ObjectHideFlags: 0
