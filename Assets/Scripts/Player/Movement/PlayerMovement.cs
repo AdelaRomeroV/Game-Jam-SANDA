@@ -54,6 +54,16 @@ public class PlayerMovement : MonoBehaviour
             EmpujarJugador(collision.transform.position);
             StartCoroutine(Invulnerabilidad());
         }
+
+        if (collision.CompareTag("Enemy") && !esInvulnerable)
+        {
+            currentLife -= 10f;
+            currentLife = Mathf.Max(currentLife, 0);
+            ActualizarBarraDeVida();
+
+            EmpujarJugador(collision.transform.position);
+            StartCoroutine(Invulnerabilidad());
+        }
     }
     private void EmpujarJugador(Vector2 enemigoPosicion)
     {
