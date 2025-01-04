@@ -27,14 +27,12 @@ public class LifeController : MonoBehaviour
         }
     }
 
-    public void gainLife(float gain) //Just in case you know?
+    public void gainLife(float gain)
     {
-
         life += gain;
         if (life > maxLife)
         {
             life = maxLife;
-
         }
 
     }
